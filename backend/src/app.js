@@ -22,6 +22,8 @@ const createApp = () => {
     cors({
       origin: config.cors.origin === '*' ? true : config.cors.origin.split(','),
       credentials: true,
+      allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+      exposedHeaders: ['Content-Disposition'],
     })
   );
 
