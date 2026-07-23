@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>双人时光 - 首页看板</title>
+<script src="https://modao.cc/agent-py/static/source/js/tailwindcss.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/echarts.min.js"></script>
+<style>
+        body {
+            background-color: #FFF0F0;
+            font-family: 'Nunito', sans-serif;
+        }
+        .mobile-container {
+            width: 100%;
+            max-width: 414px;
+            min-height: 100vh;
+            margin: 0 auto;
+            background: #FFF0F0;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 80px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .heart-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+<div class="mobile-container">
+<!-- 顶部状态栏 -->
+<header class="p-6 bg-white rounded-b-[40px] shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-[-12px]">
+<div class="w-12 h-12 rounded-full border-2 border-white overflow-hidden shadow-md z-20">
+<img alt="Boy avatar" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-06-26/6d31160cf3114de7983de0349d8a22e6.jpg"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-white overflow-hidden shadow-md z-10">
+<img alt="Girl avatar" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-06-26/bff01b38eef74be7bcb923a250ce3cba.jpg"/>
+</div>
+</div>
+<div class="flex-1 ml-4">
+<h2 class="text-[#FF8C9E] font-bold text-lg">小智 &amp; 甜甜</h2>
+<p class="text-xs text-gray-400 flex items-center">
+<span class="w-2 h-2 bg-green-400 rounded-full mr-1"></span> 已绑定 365天
+                    </p>
+</div>
+<button class="text-[#FF8C9E]">
+<iconify-icon icon="solar:bell-bing-bold-duotone" width="28"></iconify-icon>
+</button>
+</div>
+<!-- 纪念日倒计时 -->
+<div class="mt-6 bg-gradient-to-r from-[#FF8C9E] to-[#FFB5C2] rounded-3xl p-5 text-white shadow-lg relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-sm opacity-90">在一起纪念日倒计时</p>
+<div class="flex items-end mt-2">
+<span class="text-4xl font-black">28</span>
+<span class="text-lg ml-2 mb-1">天</span>
+</div>
+<p class="text-xs mt-2 opacity-80">2026年07月24日 · 三周年纪念</p>
+</div>
+<iconify-icon class="absolute -right-4 -bottom-4 text-white opacity-20 heart-pulse" icon="solar:heart-bold" width="120"></iconify-icon>
+</div>
+</header>
+<!-- 今日行程概览 -->
+<section class="px-6 mt-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-gray-800 font-bold flex items-center">
+<iconify-icon class="mr-2 text-[#FF8C9E]" icon="solar:calendar-date-bold-duotone"></iconify-icon>
+                    今日行程
+                </h3>
+<a class="text-xs text-[#FF8C9E] font-semibold" href="schedule.html">查看全部</a>
+</div>
+<div class="space-y-4">
+<!-- 行程卡片 1 -->
+<div class="bg-white p-4 rounded-2xl shadow-sm border-l-4 border-[#FF8C9E] flex items-center">
+<div class="w-12 h-12 bg-[#FFF0F0] rounded-xl flex items-center justify-center text-[#FF8C9E] mr-4">
+<iconify-icon icon="solar:cup-hot-bold-duotone" width="24"></iconify-icon>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<h4 class="font-bold text-gray-800">午餐约会</h4>
+<span class="text-[10px] bg-pink-50 text-[#FF8C9E] px-2 py-0.5 rounded-full">约会</span>
+</div>
+<p class="text-xs text-gray-500 mt-1">12:00 · 某某意式餐厅</p>
+</div>
+</div>
+<!-- 行程卡片 2 -->
+<div class="bg-white p-4 rounded-2xl shadow-sm border-l-4 border-[#FFB5C2] flex items-center">
+<div class="w-12 h-12 bg-[#FFF0F0] rounded-xl flex items-center justify-center text-[#FFB5C2] mr-4">
+<iconify-icon icon="solar:clapperboard-edit-bold-duotone" width="24"></iconify-icon>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<h4 class="font-bold text-gray-800">看电影</h4>
+<span class="text-[10px] bg-orange-50 text-orange-400 px-2 py-0.5 rounded-full">休闲</span>
+</div>
+<p class="text-xs text-gray-500 mt-1">15:30 · 万达影城</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 今日待办概览 -->
+<section class="px-6 mt-6">
+<div class="bg-white p-5 rounded-3xl shadow-sm">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-gray-800 font-bold">今日待办</h3>
+<span class="text-[10px] text-gray-400">已完成 2/5</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center space-x-3 text-sm text-gray-600">
+<iconify-icon class="text-[#FF8C9E]" icon="solar:check-circle-bold"></iconify-icon>
+<span class="line-through opacity-50">买晚餐食材</span>
+</div>
+<div class="flex items-center space-x-3 text-sm text-gray-600">
+<iconify-icon class="text-[#FF8C9E]" icon="solar:check-circle-bold"></iconify-icon>
+<span class="line-through opacity-50">取快递</span>
+</div>
+<div class="flex items-center justify-between text-sm text-gray-800">
+<div class="flex items-center space-x-3">
+<iconify-icon class="text-gray-300" icon="solar:round-alt-arrow-right-bold"></iconify-icon>
+<span>给阳台花浇水</span>
+</div>
+<span class="text-[10px] text-red-400 font-bold">逾期</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 数据概览 -->
+<section class="px-6 mt-6 grid grid-cols-2 gap-4">
+<div class="bg-gradient-to-br from-[#FFDAB9] to-[#FFB5C2] p-4 rounded-3xl text-white shadow-md">
+<p class="text-[10px] opacity-80">本月共同行程</p>
+<h4 class="text-2xl font-bold mt-1">12 <span class="text-xs font-normal">次</span></h4>
+<div class="mt-4 h-1 w-full bg-white/30 rounded-full overflow-hidden">
+<div class="h-full bg-white w-2/3"></div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-3xl shadow-sm flex flex-col items-center justify-center">
+<div class="w-16 h-16" id="chart-completion"></div>
+<p class="text-[10px] text-gray-400 mt-1 text-center">双人完成率</p>
+</div>
+</section>
+<!-- 底部导航栏 -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[414px] bg-white border-t border-gray-100 px-6 py-3 flex justify-between items-center z-50">
+<a class="flex flex-col items-center text-[#FF8C9E]" href="home.html">
+<iconify-icon icon="solar:home-smile-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1 font-bold">首页</span>
+</a>
+<a class="flex flex-col items-center text-gray-400" href="schedule.html">
+<iconify-icon icon="solar:calendar-minimalistic-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1">行程</span>
+</a>
+<a class="flex flex-col items-center text-gray-400" href="todo.html">
+<iconify-icon icon="solar:checklist-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1">ToDo</span>
+</a>
+<a class="flex flex-col items-center text-gray-400" href="album.html">
+<iconify-icon icon="solar:gallery-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1">相册</span>
+</a>
+<a class="flex flex-col items-center text-gray-400" href="profile.html">
+<iconify-icon icon="solar:user-circle-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1">我的</span>
+</a>
+</nav>
+</div>
+<script>
+        // 初始化图表
+        const chartDom = document.getElementById('chart-completion');
+        const myChart = echarts.init(chartDom);
+        const option = {
+            series: [{
+                type: 'pie',
+                radius: ['70%', '90%'],
+                avoidLabelOverlap: false,
+                label: { show: false },
+                emphasis: { label: { show: false } },
+                data: [
+                    { value: 82, itemStyle: { color: '#FF8C9E' } },
+                    { value: 18, itemStyle: { color: '#F3F4F6' } }
+                ]
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

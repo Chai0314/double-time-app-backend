@@ -7,6 +7,7 @@ const { broadcast } = require('../sockets');
 const { createMessage } = require('../services/messageService');
 const { generateVideoThumb } = require('../utils/thumbnail');
 const config = require('../config');
+const logger = require('../utils/logger');
 
 const toDTO = (m) => {
   const j = m.toJSON();
@@ -218,15 +219,20 @@ exports.createBatch = async (req, res) => {
 
   // 给首条素材发伴侣通知 + 广播
   const firstType = created[0].mediaType;
-  await notifyPartner(me, coupleId, firstType, created[0]);
-  for (const m of created) {
-    await m.reload({
-      include: [
-        { model: User, as: 'uploader', attributes: ['id', 'nickname', 'avatar'] },
-        { model: Schedule, as: 'schedule', attributes: ['id', 'title'] },
-      ],
-    });
-    broadcast(coupleId, 'media_update', { action: 'create', data: toDTO(m) });
+  try {
+    await notifyPartner(me, coupleId, firstType, created[0]);
+    for (const m of created) {
+      await m.reload({
+        include: [
+          { model: User, as: 'uploader', attributes: ['id', 'nickname', 'avatar'] },
+          { model: Schedule, as: 'schedule', attributes: ['id', 'title'] },
+        ],
+      });
+      broadcast(coupleId, 'media_update', { action: 'create', data: toDTO(m) });
+    }
+  } catch (e) {
+    // 忽略通知失败
+    logger.warn('notifyPartner failed:', e);
   }
   res.json(success(created.map(toDTO)));
 };

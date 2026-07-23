@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>双人时光 - 影像相册</title>
+<script src="https://modao.cc/agent-py/static/source/js/tailwindcss.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.js"></script>
+<style>
+        body { background-color: #FFF0F0; font-family: 'Nunito', sans-serif; }
+        .mobile-container {
+            width: 100%;
+            max-width: 414px;
+            min-height: 100vh;
+            margin: 0 auto;
+            background: #FFF0F0;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 80px;
+        }
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .photo-card {
+            break-inside: avoid;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="mobile-container">
+<!-- 顶部导航 -->
+<header class="bg-white px-6 py-6 rounded-b-[40px] shadow-sm flex justify-between items-center">
+<h1 class="text-xl font-bold text-gray-800">我们的甜蜜时光</h1>
+<button class="w-10 h-10 bg-pink-50 text-[#FF8C9E] rounded-full flex items-center justify-center">
+<iconify-icon icon="solar:upload-minimalistic-bold-duotone" width="24"></iconify-icon>
+</button>
+</header>
+<!-- 筛选 -->
+<div class="px-6 mt-6 flex justify-between items-center">
+<div class="flex space-x-4 text-xs font-bold text-gray-400">
+<button class="text-[#FF8C9E] border-b-2 border-[#FF8C9E] pb-1">全部照片</button>
+<button class="pb-1">视频</button>
+<button class="pb-1">精选</button>
+</div>
+<button class="flex items-center text-[10px] text-gray-400 bg-white px-3 py-1.5 rounded-full shadow-sm">
+                按行程分类 <iconify-icon class="ml-1" icon="solar:alt-arrow-down-bold"></iconify-icon>
+</button>
+</div>
+<!-- 照片列表 -->
+<section class="px-6 mt-6">
+<div class="mb-8">
+<h3 class="text-sm font-bold text-gray-800 mb-4 flex items-center">
+<span class="w-1.5 h-4 bg-[#FF8C9E] rounded-full mr-2"></span>
+                    迪士尼之旅 · 2026.05.01
+                </h3>
+<div class="album-grid">
+<div class="photo-card relative bg-white p-1.5 rounded-2xl shadow-sm">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-gradient-to-br from-pink-100 to-rose-100">
+<img alt="Disney castle photo" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-06-26/2e0ae858e8b24c81ab90c4df039c79bb.jpg"/>
+</div>
+<div class="p-2">
+<p class="text-[10px] font-bold text-gray-700 truncate">在城堡前合影</p>
+<p class="text-[8px] text-gray-400 mt-0.5">05月01日</p>
+</div>
+<span class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-1 rounded-lg">
+<iconify-icon class="text-yellow-400" icon="solar:star-bold" width="12"></iconify-icon>
+</span>
+</div>
+<div class="photo-card relative bg-white p-1.5 rounded-2xl shadow-sm">
+<div class="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-100">
+<img alt="Disney food photo" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-06-26/73a7e81ad6dd4a16b3e6a44189dea8f6.jpg"/>
+</div>
+<div class="p-2">
+<p class="text-[10px] font-bold text-gray-700 truncate">可爱的米奇华夫饼</p>
+<p class="text-[8px] text-gray-400 mt-0.5">05月01日</p>
+</div>
+</div>
+<div class="photo-card relative bg-white p-1.5 rounded-2xl shadow-sm">
+<div class="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-orange-100 to-amber-100">
+<img alt="Disney parade photo" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-06-26/f78975b6d6eb42a0a6cc3e3e671a0f90.jpg"/>
+</div>
+<div class="p-2">
+<p class="text-[10px] font-bold text-gray-700 truncate">花车巡游</p>
+<p class="text-[8px] text-gray-400 mt-0.5">05月01日</p>
+</div>
+</div>
+<div class="photo-card relative bg-white p-1.5 rounded-2xl shadow-sm">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-gradient-to-br from-purple-100 to-fuchsia-100">
+<img alt="Disney night photo" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-06-26/d63caa830da94a9fbba2c2d63b0acf28.jpg"/>
+</div>
+<div class="p-2">
+<p class="text-[10px] font-bold text-gray-700 truncate">夜晚的烟花</p>
+<p class="text-[8px] text-gray-400 mt-0.5">05月01日</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-sm font-bold text-gray-800 mb-4 flex items-center">
+<span class="w-1.5 h-4 bg-[#FFB5C2] rounded-full mr-2"></span>
+                    日常约会 · 最近
+                </h3>
+<div class="album-grid">
+<div class="photo-card relative bg-white p-1.5 rounded-2xl shadow-sm">
+<div class="aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-emerald-100 to-teal-100">
+<img alt="Dinner date photo" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-06-26/3f8516dbe0854d9f97a15514ae7541bf.jpg"/>
+</div>
+<div class="p-2">
+<p class="text-[10px] font-bold text-gray-700 truncate">纪念日晚餐</p>
+<p class="text-[8px] text-gray-400 mt-0.5">昨日 19:30</p>
+</div>
+<div class="absolute top-3 left-3 bg-black/30 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center">
+<iconify-icon class="text-white" icon="solar:play-bold" width="10"></iconify-icon>
+<span class="text-[8px] text-white ml-1">0:15</span>
+</div>
+</div>
+<div class="photo-card relative bg-white p-1.5 rounded-2xl shadow-sm">
+<div class="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-rose-100 to-pink-100">
+<img alt="Park walk photo" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-06-26/cbc0ef56dedf44349a16d7764bb5b13d.jpg"/>
+</div>
+<div class="p-2">
+<p class="text-[10px] font-bold text-gray-700 truncate">公园漫步</p>
+<p class="text-[8px] text-gray-400 mt-0.5">06月20日</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 底部导航栏 -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[414px] bg-white border-t border-gray-100 px-6 py-3 flex justify-between items-center z-50">
+<a class="flex flex-col items-center text-gray-400" href="home.html">
+<iconify-icon icon="solar:home-smile-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1">首页</span>
+</a>
+<a class="flex flex-col items-center text-gray-400" href="schedule.html">
+<iconify-icon icon="solar:calendar-minimalistic-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1">行程</span>
+</a>
+<a class="flex flex-col items-center text-gray-400" href="todo.html">
+<iconify-icon icon="solar:checklist-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1">ToDo</span>
+</a>
+<a class="flex flex-col items-center text-[#FF8C9E]" href="album.html">
+<iconify-icon icon="solar:gallery-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1 font-bold">相册</span>
+</a>
+<a class="flex flex-col items-center text-gray-400" href="profile.html">
+<iconify-icon icon="solar:user-circle-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1">我的</span>
+</a>
+</nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="双人时光 · 情侣/夫妻共享空间时间管理 App">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="double_time_app">
+
+  <title>双人时光</title>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    // 尽早注册 Service Worker 兜底 CORS，避免页面先发请求时 SW 还没激活
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(function (reg) {
+        console.log('[SW] registered, scope =', reg.scope);
+      }).catch(function (err) {
+        console.warn('[SW] register failed:', err);
+      });
+    }
+  </script>
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

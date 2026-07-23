@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>双人时光 - 个人中心</title>
+<script src="https://modao.cc/agent-py/static/source/js/tailwindcss.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.js"></script>
+<style>
+        body { background-color: #FFF0F0; font-family: 'Nunito', sans-serif; }
+        .mobile-container {
+            width: 100%;
+            max-width: 414px;
+            min-height: 100vh;
+            margin: 0 auto;
+            background: #FFF0F0;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 80px;
+        }
+        .splash-section {
+            background: linear-gradient(135deg, #FF8C9E 0%, #FFB5C2 100%);
+            height: 320px;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+        }
+        .profile-avatar {
+            border: 4px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="mobile-container">
+<!-- 启动页氛围区 -->
+<section class="splash-section relative flex flex-col items-center justify-center text-white p-6">
+<div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-[30px] flex items-center justify-center mb-4">
+<iconify-icon class="text-white animate-pulse" icon="solar:heart-bold" width="48"></iconify-icon>
+</div>
+<h1 class="text-2xl font-black tracking-wider">双人时光</h1>
+<p class="text-sm opacity-80 mt-1">两个人的甜蜜空间</p>
+<div class="absolute -bottom-16 left-6 right-6 bg-white rounded-[32px] p-6 shadow-xl text-gray-800">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<img alt="Profile" class="w-14 h-14 rounded-full profile-avatar" src="https://modao.cc/agent-py/media/generated_images/2026-06-26/1222dcf4d6c74ebabe9795b3bf2a6a9c.jpg"/>
+<div>
+<h3 class="font-bold">甜甜</h3>
+<p class="text-[10px] text-gray-400">设置我的作息</p>
+</div>
+</div>
+<button class="bg-[#FFF0F0] text-[#FF8C9E] px-4 py-2 rounded-full text-[10px] font-bold">
+                        编辑资料
+                    </button>
+</div>
+</div>
+</section>
+<!-- 双人数据卡片 -->
+<section class="px-6 mt-24">
+<div class="bg-white rounded-[32px] p-6 shadow-sm grid grid-cols-2 gap-y-6 gap-x-4">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-pink-50 rounded-2xl flex items-center justify-center text-[#FF8C9E]">
+<iconify-icon icon="solar:calendar-heart-bold-duotone" width="24"></iconify-icon>
+</div>
+<div>
+<p class="text-[10px] text-gray-400">相识天数</p>
+<p class="font-bold text-gray-800">428天</p>
+</div>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-400">
+<iconify-icon icon="solar:map-point-wave-bold-duotone" width="24"></iconify-icon>
+</div>
+<div>
+<p class="text-[10px] text-gray-400">累计行程</p>
+<p class="font-bold text-gray-800">156个</p>
+</div>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-400">
+<iconify-icon icon="solar:gallery-wide-bold-duotone" width="24"></iconify-icon>
+</div>
+<div>
+<p class="text-[10px] text-gray-400">甜蜜素材</p>
+<p class="font-bold text-gray-800">892项</p>
+</div>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-400">
+<iconify-icon icon="solar:link-circle-bold-duotone" width="24"></iconify-icon>
+</div>
+<div>
+<p class="text-[10px] text-gray-400">绑定天数</p>
+<p class="font-bold text-gray-800">365天</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 功能入口 -->
+<section class="px-6 mt-6 space-y-3">
+<a class="bg-white p-4 rounded-2xl shadow-sm flex items-center justify-between" href="#">
+<div class="flex items-center space-x-4">
+<iconify-icon class="text-gray-400" icon="solar:bell-bold-duotone" width="20"></iconify-icon>
+<span class="text-sm text-gray-700">消息通知</span>
+</div>
+<div class="flex items-center">
+<span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+<iconify-icon class="text-gray-300" icon="solar:alt-arrow-right-bold"></iconify-icon>
+</div>
+</a>
+<a class="bg-white p-4 rounded-2xl shadow-sm flex items-center justify-between" href="#">
+<div class="flex items-center space-x-4">
+<iconify-icon class="text-gray-400" icon="solar:pen-new-square-bold-duotone" width="20"></iconify-icon>
+<span class="text-sm text-gray-700">时光日志</span>
+</div>
+<iconify-icon class="text-gray-300" icon="solar:alt-arrow-right-bold"></iconify-icon>
+</a>
+<a class="bg-white p-4 rounded-2xl shadow-sm flex items-center justify-between" href="#">
+<div class="flex items-center space-x-4">
+<iconify-icon class="text-gray-400" icon="solar:database-bold-duotone" width="20"></iconify-icon>
+<span class="text-sm text-gray-700">数据导出</span>
+</div>
+<iconify-icon class="text-gray-300" icon="solar:alt-arrow-right-bold"></iconify-icon>
+</a>
+<a class="bg-white p-4 rounded-2xl shadow-sm flex items-center justify-between" href="#">
+<div class="flex items-center space-x-4">
+<iconify-icon class="text-gray-400" icon="solar:settings-bold-duotone" width="20"></iconify-icon>
+<span class="text-sm text-gray-700">空间设置</span>
+</div>
+<iconify-icon class="text-gray-300" icon="solar:alt-arrow-right-bold"></iconify-icon>
+</a>
+</section>
+<!-- 退出按钮 -->
+<section class="px-6 mt-8 mb-12">
+<button class="w-full bg-white text-red-400 font-bold py-4 rounded-2xl shadow-sm">
+                退出登录
+            </button>
+<p class="text-[10px] text-gray-300 text-center mt-4">双人时光 v2.4.0 · 永远在一起 ❤️</p>
+</section>
+<!-- 底部导航栏 -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[414px] bg-white border-t border-gray-100 px-6 py-3 flex justify-between items-center z-50">
+<a class="flex flex-col items-center text-gray-400" href="home.html">
+<iconify-icon icon="solar:home-smile-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1">首页</span>
+</a>
+<a class="flex flex-col items-center text-gray-400" href="schedule.html">
+<iconify-icon icon="solar:calendar-minimalistic-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1">行程</span>
+</a>
+<a class="flex flex-col items-center text-gray-400" href="todo.html">
+<iconify-icon icon="solar:checklist-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1">ToDo</span>
+</a>
+<a class="flex flex-col items-center text-gray-400" href="album.html">
+<iconify-icon icon="solar:gallery-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1">相册</span>
+</a>
+<a class="flex flex-col items-center text-[#FF8C9E]" href="profile.html">
+<iconify-icon icon="solar:user-circle-bold-duotone" width="24"></iconify-icon>
+<span class="text-[10px] mt-1 font-bold">我的</span>
+</a>
+</nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+name: couple_space
+description: "双人时光 · 情侣/夫妻共享空间时间管理 App"
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 状态管理 / 路由 / 依赖注入
+  get: ^4.6.6
+
+  # 网络
+  dio: ^5.4.0
+  socket_io_client: ^2.0.3+1
+
+  # 本地存储
+  shared_preferences: ^2.2.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # UI
+  cupertino_icons: ^1.0.6
+  cached_network_image: ^3.3.0
+  flutter_svg: ^2.0.10+1
+  table_calendar: ^3.0.9
+  fl_chart: ^0.66.2
+  intl: ^0.19.0
+  shimmer: ^3.0.0
+
+  # 媒体
+  image_picker: ^1.0.7
+  video_player: ^2.8.2
+  path_provider: ^2.1.2
+  dio_cache_interceptor: ^3.5.0
+  dio_cache_interceptor_hive_store: ^3.2.0
+
+  # 工具
+  uuid: ^4.3.3
+
+  # Web 平台 JS 互操作（用于直接走 XMLHttpRequest 解决 multipart CORS 预检问题）
+  web: ^1.1.0
+
+  # 给 MultipartFile 指定 contentType（避免 dio 推断 mimetype 失败导致后端 multer 拒收）
+  http_parser: ^4.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.8
+  hive_generator: ^2.0.1
+
+flutter:
+  uses-material-design: true
