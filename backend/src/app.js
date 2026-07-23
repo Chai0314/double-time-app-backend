@@ -18,9 +18,14 @@ const createApp = () => {
   const app = express();
 
   // CORS
-  // 预检 / 跨域头由前端 Service Worker 统一处理，
-  // 这里保持 cors 包默认配置即可。
-  app.use(cors());
+  app.use(
+    cors({
+      origin: config.cors.origin === '*' ? true : config.cors.origin.split(','),
+      credentials: true,
+      allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+      exposedHeaders: ['Content-Disposition'],
+    })
+  );
 
   app.use(express.json({ limit: '5mb' }));
   app.use(express.urlencoded({ extended: true, limit: '5mb' }));
